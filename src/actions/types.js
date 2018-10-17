@@ -1,0 +1,2 @@
+export const AUTHENTICATION_USER = 'AUTHENTICATION_USER';
+export const GET_NEWS = 'GET_NEWS';
