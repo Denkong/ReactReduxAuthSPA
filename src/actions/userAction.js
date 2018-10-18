@@ -78,7 +78,7 @@ export const userAuthentication=()=>dispatch =>{
 export const registerUser=(postData)=>dispatch =>{
     axios.post('/api/login', {
         name: postData.login,
-        password: postData.login
+        password: postData.password
       })
     .then(function (response) {   
       if (response.data.AccessToken || response.data.AccessToken) {

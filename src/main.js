@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {logoutUser} from './actions/userAction'
 import {userAuthentication} from './actions/userAction'
+import {removeNews} from './actions/newsAction'
 //COMPONENT
 import Menu from "./components/HeaderMunu"
 import Home from "./components/Home"
@@ -37,6 +38,7 @@ class Main extends Component {
                         <Route path="/signin" component={Signin}/>
                         <Route path="/logout" render={()=>{
                                 this.props.logoutUser()
+                                this.props.removeNews()
                                 return <Redirect to='/'/>
                             }}/>
                     
@@ -52,4 +54,4 @@ class Main extends Component {
 const mapStatetoProps=state=>({
     user:state.userReducer.user
 })
-export default connect(mapStatetoProps,{logoutUser,userAuthentication})(Main) ;
+export default connect(mapStatetoProps,{logoutUser,userAuthentication,removeNews})(Main) ;

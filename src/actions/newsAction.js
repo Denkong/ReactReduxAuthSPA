@@ -17,3 +17,10 @@ export const getNews=()=>dispatch =>{
     
 
 }
+
+export const removeNews=()=>dispatch =>{
+    console.log('Очистка новостей');
+    return dispatch({
+    type:'CLEAR_NEWS'
+    })
+}

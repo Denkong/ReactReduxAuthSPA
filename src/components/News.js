@@ -41,10 +41,11 @@ class News extends Component {
         return true
       }
     }
-    
-    
-    
+
   }
+
+ 
+
   render() {
     
       if (listData.length!==0) {
